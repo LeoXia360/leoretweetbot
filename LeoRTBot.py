@@ -19,12 +19,12 @@ while True:
     print("Beginnging to retweet..")
     try:
         for status in twitter_client.home_timeline():
-            print "tweet id: " + status.id
+            print "tweet id: " + str(status.id)
             twitter_client.retweet(status.id)
 
 
     except tweepy.TweepError as e:
         print(e.reason)
 
-    print("Waiting 60 seconds")
-    time.sleep(60)
+    print("Waiting 300 seconds")
+    time.sleep(300)
